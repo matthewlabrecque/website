@@ -1,0 +1,20 @@
+@font-face { font-family: 'IBMPlexMono';
+  src: url('/fonts/IBMPlexMono-Regular.ttf');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+body {
+  font-family: "IBMPlexMono", sans-serif;
+  font-size: 14px;
+  background-color: #282828;
+  color: #ebdbb2;
+  max-width: 1200px;
+  margin: auto;
+  padding: 45px;
+}
+
+hr.solid {
+  border-top: 1px solid #ebdbb2;
+}
