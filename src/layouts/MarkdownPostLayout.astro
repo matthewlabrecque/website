@@ -1,0 +1,25 @@
+---
+// src/layouts/MarkdownPostLayout.astro
+const { frontmatter } = Astro.props;
+import Header from "../components/Header.astro"
+import "../styles/global.css"
+---
+<html>
+  <head>
+    <title>{frontmatter.title} | Matt Labrecque</title>
+  </head>
+  <body>
+<Header/>
+    <h3>{frontmatter.title}</h3>
+    <p>Published on: {new Date(frontmatter.pubDate).toLocaleDateString('en-us', {
+    year: 'numeric',
+    month: 'short',
+    day: 'numeric',
+  })}</p>
+    <!-- The <slot /> is where your markdown content will be injected -->
+    <hr class="solid>"/>
+    <article class="prose">
+      <slot />
+    </article>
+  </body>
+</html>

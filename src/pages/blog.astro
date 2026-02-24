@@ -1,12 +1,9 @@
 ---
-import Navbar from "../components/Navbar.astro"
+import Header from "../components/Header.astro"
 import "../styles/global.css"
-
-// 1. Grab all .md files in the specific directory
+// Grab all .md files in the specific directory
 const posts = await Astro.glob('../pages/posts/*.md');
-
-// 2. Sort them by date (Newest to Oldest)
-// This assumes your frontmatter has a 'date' or 'pubDate' field
+// Sort them by date (Newest to Oldest)
 const sortedPosts = posts.sort((a, b) => {
   return new Date(b.frontmatter.pubDate).getTime() - new Date(a.frontmatter.pubDate).getTime();
 });
@@ -14,21 +11,26 @@ const sortedPosts = posts.sort((a, b) => {
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Matt Labrecque | Computer Science and Mathematics</title>
+    <title>Matt Labrecque's Blog</title>
 </head>
 <body>
-  <h1>Matt's Blog</h1>
-  <Navbar></Navbar>
+  <Header/>
   <p>The rants and musings of a Mathematician and Computer Scientist from Northern New England.</p>
-
-  <section>
+    
+    <section>
     <h2>Recent Posts</h2>
   <ul>
   {sortedPosts.map((post) => (
     <li>
+      
       <a href={post.url}>{post.frontmatter.title}</a>
     </li>
   ))}
   </ul>
   </section>
 </body>
+
+<style>
+.header{text-align: center;}
+
+</style>

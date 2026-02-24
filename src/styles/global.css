@@ -7,9 +7,9 @@
 
 body {
   font-family: "IBMPlexMono", sans-serif;
-  font-size: 14px;
-  background-color: #282828;
-  color: #ebdbb2;
+  font-size: 16px;
+  background-color: #292d34;
+  color: #abb2bf;
   max-width: 1200px;
   margin: auto;
   padding: 45px;
@@ -18,3 +18,14 @@ body {
 hr.solid {
   border-top: 1px solid #ebdbb2;
 }
+
+a {
+  font-family: 'IBMPlexMono', monospace;
+  font-size: 16px;
+  padding: 4px 8px;
+  color: #b8bb26;
+  text-decoration: underline;
+}
+a.link, a.visited, a.hover { color: #b8bb26; }
+
+
