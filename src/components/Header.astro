@@ -6,11 +6,11 @@ const isActive = (path) => pathname === path || pathname === path + '/';
 <h1 class="split-header">
   <span id="name">MATT LABRECQUE</span>
   <span id="links">
-      <a class="link" href="/website/" class={isActive('/') ? 'active' : ''}>Home</a>
-      <a href="/website/blog/" class={isActive('/blog') ? 'active' : ''}>Blog</a>
-      <a href="/website/documents/MLabrecque-Resume.pdf">Resume</a>
-    <a href="https://github.com/matthewlabrecque">GitHub</a>
-    <a href="https://x.com/mlabrecque_dev">X</a>
+      <a class="link" href="/website/">Home</a>
+      <a class="link" href="/website/blog/">Blog</a>
+      <a class="link" href="/website/documents/MLabrecque-Resume.pdf">Resume</a>
+    <a class="link" href="https://github.com/matthewlabrecque">GitHub</a>
+    <a class="link" href="https://x.com/mlabrecque_dev">X</a>
   </span>
 </h1>
 </html>
@@ -29,4 +29,15 @@ const isActive = (path) => pathname === path || pathname === path + '/';
 #links {
   vertical-align: middle;
 }
+
+.link {
+    color: #b8bb26;
+    cursor: pointer;
+    text-decoration: underline;
+  }
+
+.link:hover {
+  color: #fabd2f;
+}
+
 </style>
