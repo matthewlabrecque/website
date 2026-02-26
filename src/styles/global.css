@@ -16,16 +16,17 @@ body {
 }
 
 hr.solid {
-  border-top: 1px solid #ebdbb2;
+  border-top: 1px solid #b7dade;
 }
 
 a {
   font-family: 'IBMPlexMono', monospace;
   font-size: 16px;
   padding: 4px 8px;
-  color: #b8bb26;
+  color: #88af6c;
   text-decoration: underline;
 }
-a.link, a.visited, a.hover { color: #b8bb26; }
-
+a.hover {
+  color: #E5C07B;
+}
 
