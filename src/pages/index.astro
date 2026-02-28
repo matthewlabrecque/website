@@ -25,6 +25,27 @@ import "../styles/global.css"
 
     <h2>Projects</h2>
       <div class="project-grid">
+      
+        <Project
+          title="Billboard Top-40 Tracker"
+        description="A Python-based utility designed to automate the retrieval the performance data of music which appeared on the Billboard Top 100. The tool 
+        allows users to query current and past Top 100 rankings, and returns the number of songs a given artist has in the Top 100, as well as the name of any
+        song which placed in the Top 40. The reason I created this utility was to assist myself and other DJ’s at WUNH, the college radio station at UNH, which
+        has a strict “no Top 40” policy for playing music. This project focuses on clean data extraction, error handling, and modular script design, providing a
+        lightweight yet robust way to monitor trends in the music industry. "
+        tags={["Python", "Data Processing", "Data Analytics"]}
+        />
+      
+        <Project
+          title="Fedora Giulia Spin"
+          description="A specialized Linux workstation for developers built on the Fedora “leading-edge” philosophy with the goal of offering a high-performance, 
+          out-of-the-box experience for developers who want 90% of the efficiency of a custom TWM without the configuration overhead. It features a preconfigured workflow 
+          centered around the Niri scrolling window manager. Giulia is designed as a general-purpose developer suite, providing batteries-included support
+          for Rust, Go, Python, Java, and C/C++, alongside a container-ready Podman environment and a LazyVim-powered Neovim setup. This project was my first foray
+          into developing a truly open-source project for the general public."
+        tags={["Linux", "System Automation", "Podman"]}
+        />
+
         <Project
           title = "Playcaller"
           description="Done as part of a research project on the concept of Disposable Development Environments, Playcaller takes the ideas behind an autoconfiguration 
@@ -32,31 +53,18 @@ import "../styles/global.css"
           computer running a UNIX-based operating system."
           tags={["Ansible", "Python", "Postgres", "Linux"]}
         />
-        
-        <Project
+
+        <!--<Project
           title = "qSypher"
-          description="qSypher (Quantum Sypher) is an undergraduate research project I'm doing with Martin Burns and Ryad Ouhhabi where we are developing a hashing
-          algorithm and cipher for encryption on quantum computer systems. As part of this research project I am writing a memory-safe cryptographic tool for quantum
-          encrpytion/decryption."
-          tags={["Rust", "Julia", "Cryptography"]}
-        />
+        description="qSypher (Quantum Sypher) is an undergraduate research initiative conducted in collaboration with Martin Burns and Ryad Ouhhabi, focused on 
+        the development of hashing algorithms and ciphers designed for the quantum computing era. The project addresses the vulnerabilities of classical 
+        encryption by engineering quantum-resistant primitives. My primary contribution to this initiative is the architecture and development of a memory-safe
+        cryptographic toolset for encryption and decryption. By prioritizing memory safety, the tool aims to eliminate common implementation vulnerabilities."
+        tags={["Rust", "Julia", "Cryptography", "Academic Research"]}
+        />-->
 
-        <Project
-          title="sypherOS"
-          description="A project heavily inspired by the Omarchy project, SypherOS is a Fedora-based distribution which aims to provide a developer friendly, 
-          preconfigured desktop which uses the Niri scrolling window manager. The goal of this project is to allow people to get 90% of the benefits of 
-          tiling desktops, but not nearly as opinionated as Omarchy."
-          tags={["Linux"]}
-        />
-
-        <Project
-          title="Billboard Top-40 Tracker"
-          description="This was a weekend project to help me with DJ-ing at my college radio station. The station has a strict policy against playing music
-          from the Billboard Top 40, but you would have to manually look up artists to see if they charted. I wrote a program which searches through 
-          a database updated weekly to determine how many songs have charted from an artist."
-          tags={["Python"]}
-        />
-     </div>
+        
+    </div>
     
     <hr class="solid">
 
@@ -76,7 +84,7 @@ import "../styles/global.css"
       <li>Windermere Academy - Wilton, NH (2018-2023) </li>
       <ul>
         <li>High School Diploma</li>
-        <li>Graduated as Valedictorian of Class of 2021</li>
+        <li>Graduated with a GPA of 3.87</li>
       </ul>
     </ul>
   
