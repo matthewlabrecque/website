@@ -14,9 +14,11 @@ import "../styles/global.css"
 
     <div class="profile-text">
 
-      <p>I'm a third-year Applied Mathematics and Computer Science student interested in the areas of cryptography, machine learning, and operating systems. 
-        I'm also a big proponent of Free (as in Freedom) software and love supporting and working on open-source projects. When I'm not studying or coding, 
-        you can find me experimenting with coffee, playing my guitar, writing poetry, or exploring the great outdoors.</p>
+      <p>I'm a third-year Applied Mathematics student at UNH, concentrating in Computation and Algorithm Analysis, and a member of the Hamel Honors and Scholars 
+        College. My technical interests span cryptography, machine learning, and operating systems, and technical expreience includes Rust, Python, C/C++, and 
+        CI/CD infrastructure management. Currently, I work at InterOperability Labs as a DevOps engineer on the DPDK project, supporting open-source network
+        infrastructure initiatives, and at AI Foundry as a software engineer doing inference engineering. When I'm not studying or at the gym, I'm experimenting
+        with coffee, playing guitar, writing poetry, or exploring the outdoors.</p>
     <p>Contact: <span id="copy-email" class="clickable-email">mail [at] mlabrecque (dot) dev</span></p>
 
     </div>
@@ -41,20 +43,31 @@ import "../styles/global.css"
           description="A specialized Linux workstation for developers built on the Fedora “leading-edge” philosophy with the goal of offering a high-performance, 
           out-of-the-box experience for developers who want 90% of the efficiency of a custom TWM without the configuration overhead. It features a preconfigured workflow 
           centered around the Niri scrolling window manager. Giulia is designed as a general-purpose developer suite, providing batteries-included support
-          for Rust, Go, Python, Java, and C/C++, alongside a container-ready Podman environment and a LazyVim-powered Neovim setup. This project was my first foray
-          into developing a truly open-source project for the general public."
+          for Rust, Go, Python, Java, and C/C++, alongside a container-ready Podman environment and a LazyVim-powered Neovim setup."
         tags={["Linux", "System Automation", "Podman"]}
         />
 
         <Project
           title = "Playcaller"
-          description="Done as part of a research project on the concept of Disposable Development Environments, Playcaller takes the ideas behind an autoconfiguration 
-          script and pushes it to the max. This utility uses Ansible as a backend for creating automation scripts for the configuration and set up of any
-          computer running a UNIX-based operating system."
-          tags={["Ansible", "Python", "Postgres", "Linux"]}
+        description="Playcaller is an infrastructure automation tool built around the concept of Disposable Development Environments — environments 
+        that can be torn down and reproduced with minimal downtime. Using Ansible as a declarative backend, Playcaller codifies the entire development environment into
+        version-controlled playbooks, enabling reproducible machine setup across any UNIX-based system. A core component is a PostgreSQL database that serves as a 
+        cross-distro package registry, ensuring that when Playcaller assembles an Ansible pipeline,
+        it resolves the correct package name for the target system regardless of distribution. This eliminates a major pain point in multi-platform automation and
+        reflects a deliberate focus on correctness and portability over quick scripting."
+          tags={["Ansible", "Python", "PostgreSQL", "IaC", "Configuration Management"]}
         />
 
-        <!--<Project
+      <!--<Project
+          title="Julia to MATLAB Cross-Compiler"
+        description="A source-to-source compiler written in Python that translates Julia code into functionally equivalent MATLAB scripts. The compiler implements a 
+        full transpilation pipeline — lexing Julia source into tokens, constructing an AST, and mapping language constructs to their MATLAB equivalents, accounting
+        for syntax and semantic differences between the two languages. Built as a final project under the guidance of Professor Melanie Vinning, this project deepened
+        my understanding of language design, parse tree construction, and the challenges of cross-language translation."
+          tags={["Python", "Julia", "MATLAB", "Compiler Design", "AST", "Lexing", "Transpilation"]}
+        />
+
+        <Project
           title = "qSypher"
         description="qSypher (Quantum Sypher) is an undergraduate research initiative conducted in collaboration with Martin Burns and Ryad Ouhhabi, focused on 
         the development of hashing algorithms and ciphers designed for the quantum computing era. The project addresses the vulnerabilities of classical 
