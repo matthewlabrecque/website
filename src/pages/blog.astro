@@ -1,11 +1,11 @@
 ---
 import Header from "../components/Header.astro"
 import "../styles/global.css"
-// Grab all .md files in the specific directory
-const posts = await Astro.glob('../pages/posts/*.md');
-// Sort them by date (Newest to Oldest)
+import { getCollection } from 'astro:content';
+
+const posts = await getCollection('blog');
 const sortedPosts = posts.sort((a, b) => {
-  return new Date(b.frontmatter.pubDate).getTime() - new Date(a.frontmatter.pubDate).getTime();
+  return new Date(b.data.pubDate).getTime() - new Date(a.data.pubDate).getTime();
 });
 ---
 <html lang="en">
@@ -22,7 +22,7 @@ const sortedPosts = posts.sort((a, b) => {
   <ul>
   {sortedPosts.map((post) => (
     <li>
-      <a href={post.url}>{post.frontmatter.title}</a>
+      <a href={`${import.meta.env.BASE_URL}posts/${post.id}/`}>{post.data.title}</a>
     </li>
   ))}
   </ul>

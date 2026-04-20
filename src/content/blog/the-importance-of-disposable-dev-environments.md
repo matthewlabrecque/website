@@ -1,7 +1,6 @@
 ---
 title: 'The Importance of Disposable Dev Environments'
 pubDate: 2026-02-23
-layout: ../../layouts/MarkdownPostLayout.astro
 ---
 One of the more common things that us programmers and computer enthusiasts will encounter in our lives is the day we blow up a system. It isn't a matter of if, but when. I'm pretty sure that once in my life I had to reinstall Windows 10 five times in one week, because I kept thinking I could mess around with the registry editor and improve the performance of my computer "just a little more", and then boom: It would stop booting to save my life.
 
