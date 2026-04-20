@@ -48,7 +48,7 @@ import "../styles/global.css"
       
         <Project
           title="Julia to MATLAB Cross-Compiler"
-        description="A source-to-source compiler written in Python that translates Julia code into functionally equivalent MATLAB scripts. This project is ongoing as a final
+        description="A source-to-source compiler written in Python that translates Julia code into functionally equivalent MATLAB scripts. Built as a final 
         project under the guidance of Professor Melanie Vinning, this project originally started out as a joke due to both of us disliking MATLAB but turned
         into a full on project where I learned language design, parsing, and the challenges of cross-language translation."
           tags={["Python", "Julia", "MATLAB", "Compiler Design", "AST", "Lexing", "Transpilation"]}
@@ -56,9 +56,9 @@ import "../styles/global.css"
 
       <Project
         title="Computer-Controlled Telescope"
-        description="I decided to put my design, engineering, and programming skills to the test by working on building a computer controlled telescope from scratch. The 
+        description="I decided to put my design, engineering, and programming skills to the test by building a computer controlled telescope from scratch. The 
         base of the project is using a custom gear assembly controlled by an Arduino microcontroller to adjust the telescope's position. The telescope also automatically
-        accounts for the Earth's rotation as well as the latitude/longitude during positioning. Updates will be posted on YouTube."
+        accounts for the Earth's rotation as well as the latitude/longitude during positioning."
         tags={["Robotics", "Python", "C++", "Data Processing", "Arduino", "Design/Prototyping"]}
       />
 

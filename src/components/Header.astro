@@ -1,19 +1,40 @@
 ---
 ---
 <html>
+  <head>
+    <script src="https://kit.fontawesome.com/1f927a0858.js" crossorigin="anonymous"></script>
+  </head>
 <h1 class="split-header">
-  <script src="https://keepandroidopen.org/banner.js?link=https://example.com/android&hidebutton=off"></script>
   <span id="name">MATT LABRECQUE</span>
   <span id="links">
     <a class="link" href="/website/">Home</a>
+    <a class="link" href="/website/poetry/">Poetry</a>
     <a class="link" href="/website/blog/">Blog</a>
-    <a class="link" href="https://www.youtube.com/@mttylbrq">YouTube</a>
-    <a class="link" href="https://github.com/matthewlabrecque">GitHub</a>
+    
+      <span id="socials">
+    <!-- This should be placed in it's own container -->
+      <a href="https://www.youtube.com/@mttylbrq" aria-label="YouTube">
+      <i class="fa-brands fa-youtube"></i>
+      <span class="sr-only">YouTube</span>
+    </a>
+    <a href="https://www.x.com/matthewlabrecque" aria-label="X">
+      <i class="fa-brands fa-x-twitter"></i>
+        <span class="sr-only">X</span>
+      </a>
+    <a href="https://github.com/matthewlabrecque" aria-label="GitHub">
+      <i class="fa-brands fa-github"></i>
+      <span class="sr-only">GitHub</span>
+        </a>
+    </span>
+
+
   </span>
 </h1>
 </html>
+
 <style>
 .split-header {
+
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -28,6 +49,18 @@
   vertical-align: middle;
 }
 
+#socials {
+  all: unset;
+  display: inline-flex;
+  gap: 0.4rem;
+}
+
+#socials a {
+  display: inline-flex;
+  align-items: center;
+  text-decoration: none;
+}
+
 .link {
     color: #88af6c;
     cursor: pointer;
@@ -36,6 +69,14 @@
 
 .link:hover {
   color: #E5C07B;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px; height: 1px;
+  overflow: hidden;
+  clip: rect(0,0,0,0);
+  white-space: nowrap;
 }
 
 </style>
