@@ -1,6 +1,14 @@
 ---
 // Project.astro
-const {title, description, tags} = Astro.props;
+const { title, description, tags } = Astro.props;
+
+// Slugify tags so "C++" → "cpp", "Data Processing" → "data-processing", etc.
+const slugify = (str) =>
+  str
+    .toLowerCase()
+    .replace(/\s+/g, '-')
+    .replace(/\+\+/g, 'pp')
+    .replace(/\//g, '-');
 ---
 
 <article class="project-card">
@@ -9,12 +17,12 @@ const {title, description, tags} = Astro.props;
   </h3>
   <p>{description}</p>
   <div class="tag-container">
-    {tags.map((tag) => <span class={`tag ${tag.toLowerCase()}`}>{tag}</span>)}
+    {tags.map((tag) => <span class={`tag ${slugify(tag)}`}>{tag}</span>)}
   </div>
 </article>
 
 <style>
-  .project-card{
+  .project-card {
     flex: 0 1 calc(33.333% - 20px);
     padding: 5px;
   }
@@ -24,7 +32,7 @@ const {title, description, tags} = Astro.props;
     flex-wrap: wrap;
     gap: 8px;
   }
-  
+
   .tag {
     font-family: 'IBMPlexMono', monospace;
     font-size: 14px;
@@ -33,14 +41,15 @@ const {title, description, tags} = Astro.props;
     border-radius: 2px;
   }
 
-.split {
+  .split {
     display: flex;
     justify-content: space-between;
     align-items: center;
     vertical-align: middle;
     width: 100%;
-}
+  }
 
+  /* Existing tags */
   .tag.ansible  { color: #d19a66; border-color: rgba(209, 154, 102, 0.3); background: rgba(209, 154, 102, 0.05); }
   .tag.rust     { color: #e06c75; border-color: rgba(224, 108, 117, 0.3); background: rgba(224, 108, 117, 0.05); }
   .tag.python   { color: #98c379; border-color: rgba(152, 195, 121, 0.3); background: rgba(152, 195, 121, 0.05); }
@@ -48,4 +57,44 @@ const {title, description, tags} = Astro.props;
   .tag.julia    { color: #c678dd; border-color: rgba(198, 120, 221, 0.3); background: rgba(198, 120, 221, 0.05); }
   .tag.cpp      { color: #61afef; border-color: rgba(97, 175, 239, 0.3);  background: rgba(97, 175, 239, 0.05); }
   .tag.linux    { color: #e5c07b; border-color: rgba(229, 192, 123, 0.3); background: rgba(229, 192, 123, 0.05); }
+
+  /* Programming Languages */
+  .tag.matlab {
+    color: #528bff;
+    border-color: rgba(82, 139, 255, 0.3);
+    background: rgba(82, 139, 255, 0.05);
+  }
+
+  /* Data Category */
+  .tag.data-processing,
+  .tag.data-analytics {
+    color: #d55fde;
+    border-color: rgba(213, 95, 222, 0.3);
+    background: rgba(213, 95, 222, 0.05);
+  }
+
+  /* Compiler / PL Design Category */
+  .tag.compiler-design,
+  .tag.ast,
+  .tag.lexing,
+  .tag.transpilation {
+    color: #4ec9b0;
+    border-color: rgba(78, 201, 176, 0.3);
+    background: rgba(78, 201, 176, 0.05);
+  }
+
+  /* Robotics / Hardware Category (Arduino brand teal) */
+  .tag.robotics,
+  .tag.arduino {
+    color: #00979d;
+    border-color: rgba(0, 151, 157, 0.3);
+    background: rgba(0, 151, 157, 0.05);
+  }
+
+  /* Design / Prototyping */
+  .tag.design-prototyping {
+    color: #f06595;
+    border-color: rgba(240, 101, 149, 0.3);
+    background: rgba(240, 101, 149, 0.05);
+  }
 </style>
