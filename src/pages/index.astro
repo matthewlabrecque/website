@@ -12,13 +12,13 @@ import "../styles/global.css"
   <body>
     <Header/>
 
-    <div class="profile-text">
+	<div class="profile-text">
 
-			<p>I'm a senior at the University of New Hampshire, studying Applied Mathematics with a concentration in Computational Mathematics and Machine Learning.
-			I'm also a film maker, musician, poet, and tinkerer. In short, I'm a creative nerd who uses technology to create and build things that interest 
-			me. When I'm not working on my homelab, studying languages, or studying for exams, you can usually find me lifting or outdoors enjoying this 
-			beautiful planet that we get to call home.
-      </p>
+			<p>I'm currently in my Senior year at the University of New Hampshire, studying Applied Mathematics with a concentration in computational mathematics.
+			My interests include systems-programming, algorithm analysis, and machine learning. Additionally, I'm also a film maker, musician, poet, and in-general a 
+			tinkerer who uses technology to create and build things which interest me. When I'm not working on my homelab, studying for exams or failing to learn
+			Spansih, you can usually find me lifting weights or exploring the great outdoors of this beautiful planet we get to call home.</p>
+
     <p>Contact: <span id="copy-email" class="clickable-email">mlabrecque2002 [at] gmail (dot) com</span></p>
 
     </div>
@@ -56,11 +56,11 @@ import "../styles/global.css"
 
         <Project
           title="Homelab"
-          description="Over the last several months I have planned out and built a four-node Kubernetes cluster homelab for self-hosting my 
+          description="Over the last several months I have worked on designing and building a four-node Kubernetes cluster homelab for self-hosting my 
 					   media collection as well as personal projects. The homelab is composed of three Lenovo ThinkCentre M90q computers serving as worker
 					   nodes, and a Raspberry Pi 5 which serves as the control node. Some services I run in this cluster include PiHole for custom DNS 
-					   blocking, Jellyfin for manging music/movies, a private Forgejo instance for Git projects which I don't want to be publically hosted, 
-		  and Nextcloud to provide cloud storage/backups which utilizes an 8TB NAS for mass storage."
+					   blocking, Jellyfin for manging music/movies, a private Forgejo instance for Git projects which I don't want to be publically hosted,
+					   Nextcloud to provide cloud storage/backups which utilizes an 8TB NAS for mass storage, and FreshRSS for media consumption."
           tags={["Kubernetes", "System Administration", "Linux"]}
         />
 
@@ -72,15 +72,6 @@ import "../styles/global.css"
 		       enabling a fast, dynamic workflow of note taking that prioritizes getting knowledge down without the hassle of using
 		       a GUI application."
 		  tags={["Go", "CLI"]}
-        />
-
-        <Project
-          title="lCal"
-          descrption="I worked with a group of about 10 individuals to develop a Calendar application for Linux utilizng the GTK toolkit. Some
-          of the highlights of this calendar include a CLI interface, a GUI writtne in GTK, support for multiple calendars, as well as including
-          natural language processing to allow natural language to be used to create calendar events. This allows someone to type something like
-          'Lunch with Martin tomorrow at 13:00' and it will automatically derive the time, date, and other relevant information to add to the calendar."
-          tags={["Go", "CLI", "GTK"]}
         />
    </div>
     
@@ -96,7 +87,7 @@ import "../styles/global.css"
       <li>Nashua Community College - Nashua, NH (2023-2025)</li>
       <ul>
         <li>A.S. in Computer Science</li>
-    <li>Member, Phi Theta Kappa Honor Society</li>
+		<li>Member, Phi Theta Kappa Honor Society</li>
         <li>Graduated Summa Cum Laude</li>
       </ul>
     </ul>
